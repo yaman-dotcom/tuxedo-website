@@ -1,0 +1,20 @@
+@media(max-width:1340px ){
+    h1{
+        font-size:100px ;
+    }
+    p{
+        font-size: 30px;
+    }
+    .main-button-paragraph{
+        font-size: 30px;
+    }
+    .secondary-button-paragraph{
+        font-size: 30px;
+    }
+    a{
+        font-size: 30px;
+    }
+    ul{
+        gap: 10%px;
+    }
+}

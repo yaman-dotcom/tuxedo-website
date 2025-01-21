@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Fira+Code:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+body,html{
+  margin: 0;
+  overscroll-behavior: none;
+}
+h1{
+  margin: 0;
+  font-size: 140px;
+  color:#303820;
+  line-height: 110%;
+  font-weight: 300;
+  font-family: 'Alex Brush', cursive;
+}
+p{
+  margin: 0;
+  font-size: 36px;
+  font-weight:200 ;
+  font-family: "Inter", serif;
+}
+.main-button{
+  height: fit-content;
+  width: fit-content;
+  display: flex;
+  border: none;
+  background-color: #303820;
+  border-radius: 12px;
+  padding: 12px 18px;
+}
+.main-button-paragraph{
+  color: white;
+  font-size: 36px;
+  line-height: 140%;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+.secondary-button-paragraph{
+  border-color:white;
+  font-size: 36px;
+  line-height: 140%;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+.secondary-button{
+  height: fit-content;
+  width: fit-content;
+  border-width: 3px;
+  border-radius: 12px;
+  border: solid;
+  background-color: transparent;
+  padding: 12px 18px;
+}
+a{
+  text-decoration: none;
+  font-family: "Inter", serif;
+  font-size: 36px;
+}
+ul{
+  width: fit-content;
+  display: flex;
+  gap: 120px;
+  padding: 0;
+}
+svg {
+  max-width: 100%;
+  height: auto;
+}
