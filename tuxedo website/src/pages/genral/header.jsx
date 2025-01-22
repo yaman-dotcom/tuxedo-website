@@ -1,4 +1,7 @@
 import './style/header.css'
+
+import './style/header 1340px.css'
+import './style/header 1100.css'
 function Header(){
     
     return(
@@ -15,10 +18,10 @@ function Header(){
 
          <div className='header-links-container'>
                 <ul>
-                    <a className='header-link' href="/">Home</a>
-                    <a className='header-link' href="/">Store</a>
-                    <a className='header-link' href="/">Contact Us</a>
-                    <a className='header-link' href="/">Login</a>
+                    <a className='header-link' href="/"><p className='header-link-text'> Home</p></a>
+                    <a className='header-link' href="/"> <p className='header-link-text'>Store</p></a>
+                    <a className='header-link' href="/"><p className='header-link-text'>Contact us</p></a>
+                    <a className='header-link' href="/"><p className='header-link-text'>Login</p></a>
                     
                 </ul>
          </div>

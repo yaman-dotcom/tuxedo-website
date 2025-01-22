@@ -14,7 +14,6 @@
     height: 100vh;
     display: flex;
     align-items: start;
-    padding: 200px 60px 0 60px;
 }
 .hero-title{
     z-index: 2;
@@ -24,6 +23,7 @@
     z-index: 3;
     display: flex;
     flex-direction: column;
+    margin: 200px  0 0 60px;
 }
 .hero-paragraph{
     font-style: italic;

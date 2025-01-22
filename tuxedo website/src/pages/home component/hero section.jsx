@@ -1,6 +1,9 @@
 import heroImage from '../../assets/home page sources/hero image edited 1.png'
 import './home styling/hero section.css'
-import './home styling/hero section 1340px .css'
+
+import './home styling/hero section 1100px.css'
+import './home styling/hero section 1340px.css'
+
 
 function HeroSection(){
 

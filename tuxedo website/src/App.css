@@ -12,6 +12,15 @@ h1{
   font-weight: 300;
   font-family: 'Alex Brush', cursive;
 }
+h2{
+  margin: 0;
+  font-size: 112px;
+  color:#303820;
+  line-height: 110%;
+  font-weight: 300;
+  font-family: 'Alex Brush', cursive;
+}
+
 p{
   margin: 0;
   font-size: 36px;
@@ -56,12 +65,21 @@ a{
   font-size: 36px;
 }
 ul{
-  width: fit-content;
+  width: 100%;
   display: flex;
-  gap: 120px;
+  justify-content: space-between;
   padding: 0;
 }
 svg {
   max-width: 100%;
   height: auto;
+}
+h3{
+  font-family: "Inter", serif;
+  font-size: 60px;
+  line-height: 120%;
+  font-weight: 200;
+  font-style: italic;
+  letter-spacing: 7px;
+  margin: 0;
 }

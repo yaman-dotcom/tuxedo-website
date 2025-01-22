@@ -17,8 +17,9 @@
 }
 .header-links-container {
     display: flex;
-    gap: 20px; /* Adds spacing between links */
-    width: fit-content;
+    justify-content: space-between; /* Adds spacing between links */
+    align-items:center;
+    width: 60%;
 }
 .header-container svg {
     max-width: 50px;
@@ -29,4 +30,7 @@
 }
 .header-logo-container{
     padding-left: 60px;
+}
+.header-link-text{
+    font-weight: 400;
 }

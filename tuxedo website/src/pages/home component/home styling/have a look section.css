@@ -1,0 +1,46 @@
+.have-a-look-section{
+    width: 100%;
+    margin:70px 0;
+}
+.HAL-gallery-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0 60px;
+    align-items: center;
+    gap: 12px;
+}
+.HAL-title-container{
+    width: fit-content;
+    margin: 0 0 0 60px;
+}
+.HAL-shoes, .HAL-tie, .HAL-tuxedo{
+    width: fill;
+    object-fit: cover;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    aspect-ratio: 529 / 614;
+}
+.HAL-gallery-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    object-fit: cover;
+}
+.HAL-text-container{
+    width: 100%;
+    height: fit-content;
+    z-index: 3;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    margin:6px 24px ;
+    background-color: rgba(255, 255, 255, 0.01);
+}
+.HAL-sub-title{
+    color: white;
+}
