@@ -14,7 +14,7 @@
     margin: 0 0 0 60px;
 }
 .HAL-shoes, .HAL-tie, .HAL-tuxedo{
-    width: fill;
+    width: 33.3333333%;
     object-fit: cover;
     overflow: hidden;
     display: flex;
@@ -32,7 +32,7 @@
     object-fit: cover;
 }
 .HAL-text-container{
-    width: 100%;
+    width: fit-content;
     height: fit-content;
     z-index: 3;
     display: flex;

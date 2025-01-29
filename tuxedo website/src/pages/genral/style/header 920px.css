@@ -1,0 +1,8 @@
+@media(max-width:920px){
+    .header-logo-container{
+        padding-left: 36px;
+    }
+    .header-bag-container{
+        padding-right: 36px;
+    }
+}

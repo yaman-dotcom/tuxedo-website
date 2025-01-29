@@ -2,11 +2,8 @@
     .HAL-gallery-container{
         margin: 0 48px;
     }
-    .HAl-title-container{
+    .HAL-title-container{
         margin: 0 0 0 48px;
-    }
-    .HAL-gallery-container{
-        /* flex-direction: column; */
     }
     .HAL-shoes, .HAL-tie, .HAL-tuxedo{
         

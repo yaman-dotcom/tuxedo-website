@@ -1,0 +1,38 @@
+.footer-container{
+   overflow: hidden;
+   width: 100%;
+    height: fit-content;
+    opacity: 60%;
+    display: flex;
+    gap: 66px;
+    position: relative;
+}
+
+.footer-list{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+.footer-link{
+    color: #303820;
+    font-size: 30px;
+}
+.footer-title{
+    font-style:normal;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    color: #3C442B;
+}
+.footer-svg-container{
+    position: absolute;
+    display: flex;
+    right: -74px;
+    bottom: -125px;
+}
+.footer-cloth-container , .footer-navigation-container, .footer-contact-us-container{
+    margin-bottom:24px ;
+}
+.footer-contact-us-container{
+    margin-left: 60px;
+}

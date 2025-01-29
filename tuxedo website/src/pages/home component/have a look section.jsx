@@ -1,6 +1,7 @@
 import './home styling/have a look section.css'
 import './home styling/hero section 1340px.css'
 import './home styling/have a look section 1100px.css'
+import './home styling/have a look section 920px.css'
 
 import Tuxedo from '../../assets/home page sources/tuxido colored  1.png'
 import Tie from '../../assets/home page sources/edited tie 1.png'
@@ -18,7 +19,7 @@ function HaveALookSection(){
             </div>
             <div className='HAL-gallery-container'>
                 <div className='HAL-tuxedo'>
-                    <img className='HAl-gallery-image' src={Tuxedo}  />
+                    <img className='HAL-gallery-image' src={Tuxedo}  />
                     <div className='HAL-text-container'>
                         <h3 className='HAL-sub-title'>
                             Tuxedo
@@ -26,7 +27,7 @@ function HaveALookSection(){
                     </div>
                 </div>
                 <div  className='HAL-tie'>
-                    <img className='HAl-gallery-image' src={Tie} alt="" />
+                    <img className='HAL-gallery-image' src={Tie} alt="" />
                     <div className='HAL-text-container'>
                         <h3 className='HAL-sub-title'>
                             Tie
@@ -34,7 +35,7 @@ function HaveALookSection(){
                     </div>
                 </div>
                 <div className='HAL-shoes'>
-                    <img className='HAl-gallery-image' src={Shoes} alt="" />
+                    <img className='HAL-gallery-image' src={Shoes} alt="" />
                     <div className='HAL-text-container'>
                         <h3 className='HAL-sub-title'>
                             Shoes

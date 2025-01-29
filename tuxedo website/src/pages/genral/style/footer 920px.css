@@ -1,0 +1,8 @@
+@media(max-width:920px){
+    .footer-cloth-container{
+        display: none;
+    }
+    .footer-contact-us-container{
+        margin-left: 36px;
+    }
+}
