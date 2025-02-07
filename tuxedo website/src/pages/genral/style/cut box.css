@@ -1,0 +1,16 @@
+.cut-box{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #3C442B;
+}
+.cut{
+    font-size: 24px;
+    padding: 0 18px;
+    font-weight: 300;
+    color: black;
+}

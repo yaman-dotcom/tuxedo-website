@@ -1,0 +1,41 @@
+.loafer-card{
+    width: calc(100% - 18px);
+    border: solid;
+    border-color: rgb(0,0,0,0.1);
+    border-width: 1px;
+    border-radius: 4%;
+    aspect-ratio: 324.5/382;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+    align-items: end;
+}
+.lc-info-container{
+    background-color: #3C442B80;
+    padding: 12px 12px ;
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    height: fit-content;
+    width: 100%;
+    /* margin: 0 6px 12px 6px; */
+}
+
+.lc-name{
+    color: white;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 140%;
+    width: fit-content;
+    max-width: 50%;
+    font-style: italic;
+    /* padding: 12px 12px ; */
+}
+.lc-price{
+    color: white;
+    text-decoration: underline;
+    font-style: italic;
+    /* padding: 12px 12px ; */
+   
+}

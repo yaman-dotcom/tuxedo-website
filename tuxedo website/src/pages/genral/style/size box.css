@@ -1,0 +1,17 @@
+.size-box{
+    /* width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    border-color: #3C442B;
+    grid-column: span 1;
+}
+.size{
+    font-size: 24px;
+    padding: 0 18px;
+    font-weight: 300;
+
+}

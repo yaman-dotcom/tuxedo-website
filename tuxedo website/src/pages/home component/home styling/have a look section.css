@@ -7,7 +7,7 @@
     flex-direction: row;
     margin: 0 60px;
     align-items: center;
-    gap: 12px;
+    gap: 18px;
 }
 .HAL-title-container{
     width: fit-content;
@@ -20,6 +20,7 @@
     display: flex;
     position: relative;
     aspect-ratio: 529 / 614;
+    border-radius: 5%;
 }
 .HAL-gallery-image{
     position: absolute;

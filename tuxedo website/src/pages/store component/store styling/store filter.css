@@ -1,0 +1,119 @@
+.filter-section{
+    z-index: 3;
+    position: sticky;
+    top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 18px  24px 0 60px;
+    margin-top:  70px;
+    width: fit-content;
+    height: calc(100vh - 90px);
+    border: solid;
+    border-radius: 0 20px 20px 0;
+    border-left-width: 0;
+    border-right-width:1px ;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-color:  rgb(0,0,0,0.1);
+}
+.filter-tuxedo{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:6px;
+    width: 100%;
+    height: fit-content;
+}
+.filter-check-box {
+    appearance: none;
+    margin:0;
+    border: solid;
+    border-width: 1.5px;
+    background-color: #C7C7C7;
+    border-radius: 25%;
+    width: 17px;
+    height: 17px;
+}
+.filter-check-box:checked{
+    content:"";
+    background-color: #078284;
+}
+.filter-title{
+    max-width: 130px;
+    font-size: 30px;
+    font-weight: 550;
+    
+}
+.filter-title-container-double{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: end;
+    
+}
+.filter-title-container ,.filter-sub-title-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    
+    
+}
+.filter-title-container{
+    padding-bottom: 6px;
+}
+.filter-sub-title-container{
+    margin-left:18px ;
+    width: calc(100% -18px);
+    justify-content: space-between;
+}
+.filter-tuxedo-content ,.filter-loafer-content ,.filter-tie-content{
+    width: 100%;
+    display: flex;
+    /* display: block; */
+    flex-direction: column;
+    /* padding-top: 6px; */
+    gap: 6px;
+}
+.filter-sub-title{
+    color: #3C442B;
+    font-size: 24px;
+    font-weight: 450;
+}
+.filter-size-content{
+    width: calc(100% - 18px);
+    margin-left:18px ;
+    gap: 6px;
+    flex: 1;
+    display:grid;
+    grid-template-rows: auto;
+    grid-template-columns:repeat(2,1fr);
+    /* height: 0 !important; */
+    overflow: hidden;
+    /* max-height: 0; */
+}
+.size-box{
+    width: calc(100% - 3px);
+}
+
+.filter-color-content ,.filter-cut-content{
+    width: calc(100%-18px);
+    margin-left:18px ;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow: hidden;
+    
+}
+.filter-title-container{
+    width: 100%;
+    justify-content: space-between;
+}
+.filter-size-content,
+.filter-color-content,
+.filter-cut-content {
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}

@@ -3,7 +3,9 @@ import './style/header 1340px.css'
 import './style/header 1100.css'
 import './style/header 920px.css'
 
+import React from 'react'
 import { useState ,useEffect } from 'react'
+import { Link } from 'react-router-dom'
 function Header(){
   let [width,setWidth]=useState(window.outerWidth)
   useEffect(()=>{
@@ -29,8 +31,6 @@ const changeTheOpened = () => {
         return newState;
     });
 };
-
-console.log("high")
 
     return(
         <>
@@ -110,10 +110,10 @@ console.log("high")
          >
             <ul className='header-menue-list'>
                 <div className='header-link-phone-container'>
-                    <a className='header-link-phone' href="/"><p className='header-link-text-phone'> Home</p></a>
+                    <a className='header-link-phone'  to="/store"><p className='header-link-text-phone'> Home</p></a>
                 </div>
                 <div className='header-link-phone-container'>
-                    <a className='header-link-phone' href="/"> <p className='header-link-text-phone'>Store</p></a>
+                    <Link className='header-link-phone' to="/store" onClick={()=>console.log("clicked")}> <p className='header-link-text-phone'>Store</p></Link>
                 </div>
                 <div className='header-link-phone-container'>
                     <a className='header-link-phone' href="/"><p className='header-link-text-phone'>Contact us</p></a>

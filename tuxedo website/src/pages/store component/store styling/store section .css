@@ -1,0 +1,17 @@
+.store-section{
+   
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    width: 100vw;
+    height: fit-content;
+    padding: 70px 60px 0;
+    overflow: hidden;
+}
+.store-card-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    overflow: hidden;
+}
