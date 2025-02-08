@@ -57,6 +57,7 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
 //         setIsClose(true)
 //     }
 //    }
+console.log('main')
     return(
         <>
             <div className="filter-section">
