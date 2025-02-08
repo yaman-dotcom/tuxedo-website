@@ -16,14 +16,26 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
    let tuxedoAvailbleSizes=tuxedoSizes
    let tuxedoAvailbleColors=tuxedoColors.name
    let tuxedoAvailbleColorsCode=tuxedoColors.code
+   let tuxedoAvailble={
+    color:tuxedoColors.name,
+    code:tuxedoColors.code,
+   }
 
    let loaferAvailbleSizes=loaferSizes
    let loaferAvailbleColors=loaferColors.name
    let loaferAvailbleColorsCode=loaferColors.code
+   let loaferAvailble={
+    color:loaferColors.name,
+    code:loaferColors.code,
+   }
 
    let tieAvailbleCuts=tieCuts
    let tieAvailbleColors=tieColor.name
    let tieAvailbleColorsCode=tieColor.code
+   let tieAvailble={
+    color:tieColor.name,
+    code:tieColor.code,
+   }
 
     
 //    let [isClose,setIsClose]=useState(true)
@@ -99,10 +111,11 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
                              </svg>
                          </div>
                         <div className="filter-size-content" style={{ 'max-height': section.tuxedoSize ? "fit-content" : "0px" }}>
-                            <SizeBox size={tuxedoAvailbleSizes[0]}/>
-                            <SizeBox size={tuxedoAvailbleSizes[1]}/>
-                            <SizeBox size={tuxedoAvailbleSizes[2]}/>
-                            <SizeBox size={tuxedoAvailbleSizes[3]}/>
+                            {
+                                tuxedoAvailbleSizes.map((size,index)=>(
+                                    <SizeBox key={index} size={size}/>
+                                ))
+                            }
                             data
                         </div> 
                         
@@ -116,9 +129,11 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
                              </svg>
                          </div>
                         <div className="filter-color-content" style={{maxHeight:section.tuxedoColor?"fit-content":0}}>
-                            <ColorBox color={tuxedoAvailbleColors[0]} colorCode={tuxedoAvailbleColorsCode[0]}/>
-                            <ColorBox color={tuxedoAvailbleColors[1]} colorCode={tuxedoAvailbleColorsCode[1]}/>
-                            <ColorBox color={tuxedoAvailbleColors[2]} colorCode={tuxedoAvailbleColorsCode[2]}/>
+                        {
+                            tuxedoAvailble.color.map((color,index)=>(
+                                <ColorBox key={index} color={color} colorCode={tuxedoAvailble.code[index]}/>
+                            ))
+                        }
                             {/* <SizeBox size={tuxedoAvailbleColors[3]}/> */}
                         </div> 
                         
@@ -143,10 +158,11 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
                              </svg>
                          </div>
                         <div className="filter-size-content" style={{maxHeight:section.loaferSize?"fit-content":0}}>
-                            <SizeBox size={loaferAvailbleSizes[0]}/>
-                            <SizeBox size={loaferAvailbleSizes[1]}/>
-                            <SizeBox size={loaferAvailbleSizes[2]}/>
-                            <SizeBox size={loaferAvailbleSizes[3]}/>
+                        {
+                            loaferAvailbleSizes.map((size,index)=>(
+                                <SizeBox key={index} size={size}/>
+                            ))
+                        }
                         </div>
                         <div className='filter-tuxedo-content'>
                          <div className='filter-sub-title-container' onClick={()=>toggleSection("loaferColor")}>
@@ -158,9 +174,11 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
                              </svg>
                          </div>
                         <div className="filter-color-content" style={{maxHeight:section.loaferColor?"fit-content":0}}>
-                            <ColorBox color={loaferAvailbleColors[0]} colorCode={loaferAvailbleColorsCode[0]}/>
-                            <ColorBox color={loaferAvailbleColors[1]} colorCode={loaferAvailbleColorsCode[1]}/>
-                            <ColorBox color={loaferAvailbleColors[2]} colorCode={loaferAvailbleColorsCode[2]}/>
+                        {
+                            loaferAvailble.color.map((color,index)=>(
+                                <ColorBox key={index} color={color} colorCode={loaferAvailble.code[index]}/>
+                            ))
+                        }
                             {/* <SizeBox size={tuxedoAvailbleColors[3]}/> */}
                         </div>
                         </div> 
@@ -183,9 +201,11 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
                              </svg>
                          </div>
                         <div className="filter-cut-content" style={{maxHeight:section.tieCut?"fit-content":0}}>
-                            <CutBox cutName={tieAvailbleCuts[0]}/>
-                            <CutBox cutName={tieAvailbleCuts[1]}/>
-                            <CutBox cutName={tieAvailbleCuts[2]}/>
+                        {
+                            tieAvailbleCuts.map((cut,index)=>(
+                                <CutBox key={index} cutName={cut}/>
+                            ))
+                        }
                             {/* <SizeBox size={tieAvailbleCuts[3]}/> */}
                         </div>
                         <div className='filter-tuxedo-content'>
@@ -198,9 +218,11 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
                              </svg>
                          </div>
                         <div className="filter-color-content" style={{maxHeight:section.tieColor?"fit-content":0}}>
-                            <ColorBox color={tieAvailbleColors[0]} colorCode={tieAvailbleColorsCode[0]}/>
-                            <ColorBox color={tieAvailbleColors[1]} colorCode={tieAvailbleColorsCode[1]}/>
-                            <ColorBox color={tieAvailbleColors[2]} colorCode={tieAvailbleColorsCode[2]}/>
+                            {
+                                tieAvailble.color.map((color,index)=>(
+                                    <ColorBox key={index} color={color} colorCode={tieAvailble.code[index]} />
+                                ))
+                            }
                             {/* <SizeBox size={tuxedoAvailbleColors[3]}/> */}
                         </div>
                         </div> 
