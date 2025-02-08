@@ -10,9 +10,13 @@
 .sh-title-container{
     margin: 0 60px;
 }
-
+.sh-card-container{
+  border-radius: 10%;
+  overflow: hidden;
+}
   
 .sh-card{
+  border-radius: 10%;
   display: flex;
   width: 100%;
   height: 100%;

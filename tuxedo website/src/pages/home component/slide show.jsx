@@ -58,52 +58,52 @@ function SlideShowSection(){
                    
                     style={{width:'4000px', height:'500px'}}
                     >
-                    <SwiperSlide>
+                    <SwiperSlide className="sh-card-container">
                         <div className="sh-card">
                             <img className="sh-img"src={card1} alt="" />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="sh-card-container">
                         <div className="sh-card">
                             <img className="sh-img"src={card4} alt="" />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="sh-card-container">
                         <div className="sh-card">
                             <img className="sh-img"src={card3} alt="" />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="sh-card-container">
                         <div className="sh-card">
                             <img className="sh-img"src={card2} alt="" />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="sh-card-container">
                         <div className="sh-card">
                             <img className="sh-img"src={card5} alt="" />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="sh-card-container">
                         <div className="sh-card">
                             <img className="sh-img"src={card1} alt="" />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="sh-card-container">
                         <div className="sh-card">
                             <img className="sh-img"src={card4} alt="" />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="sh-card-container">
                         <div className="sh-card">
                             <img className="sh-img"src={card3} alt="" />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="sh-card-container">
                         <div className="sh-card">
                             <img className="sh-img"src={card2} alt="" />
                         </div>
                     </SwiperSlide>
-                    <SwiperSlide>
+                    <SwiperSlide className="sh-card-container">
                         <div className="sh-card">
                             <img className="sh-img"src={card5} alt="" />
                         </div>

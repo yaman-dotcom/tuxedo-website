@@ -6,8 +6,12 @@ import './style/header 920px.css'
 import React from 'react'
 import { useState ,useEffect } from 'react'
 import { Link } from 'react-router-dom'
-function Header(){
+
+function Header({textColor}){
   let [width,setWidth]=useState(window.outerWidth)
+  let color
+  textColor==undefined?color="white":color=textColor;
+
   useEffect(()=>{
     const handelResize=()=>{
         setWidth(window.outerWidth)
@@ -50,10 +54,10 @@ const changeTheOpened = () => {
          }}
          >
                 <ul>
-                    <a className='header-link' href="/"><p className='header-link-text'> Home</p></a>
-                    <a className='header-link' href="/"> <p className='header-link-text'>Store</p></a>
-                    <a className='header-link' href="/"><p className='header-link-text'>Contact us</p></a>
-                    <a className='header-link' href="/"><p className='header-link-text'>Login</p></a>
+                    <a className='header-link' href="/"><p style={{color:textColor}} className='header-link-text'> Home</p></a>
+                    <a className='header-link' href="/store"><p style={{color:textColor}} className='header-link-text'>Store</p></a>
+                    <a className='header-link' href="/"><p  style={{color:textColor}} className='header-link-text'>Contact us</p></a>
+                    <a className='header-link' href="/"><p style={{color:textColor}} className='header-link-text'>Login</p></a>
                     
                 </ul>
          </div>
@@ -65,12 +69,12 @@ const changeTheOpened = () => {
          >
          <svg width="47" height="47" viewBox="0 0 34 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_21_86)">
-                <path d="M22.0727 4.71094H28.4069L29.5 31.3224H4.5L5.59326 4.71094H11.9274" stroke="white" stroke-width="2.13" stroke-miterlimit="10"/>
-                <path d="M22.073 1.43616V3.97248C22.0695 4.64408 21.8012 5.28717 21.3263 5.76207C20.8514 6.23697 20.2083 6.50531 19.5367 6.5088H14.4641C13.7925 6.50531 13.1494 6.23697 12.6745 5.76207C12.1996 5.28717 11.9312 4.64408 11.9277 3.97248V1.43616H22.073Z" stroke="white" stroke-width="2.13" stroke-miterlimit="10"/>
+                <path d="M22.0727 4.71094H28.4069L29.5 31.3224H4.5L5.59326 4.71094H11.9274" stroke={color} stroke-width="2.13" stroke-miterlimit="10"/>
+                <path d="M22.073 1.43616V3.97248C22.0695 4.64408 21.8012 5.28717 21.3263 5.76207C20.8514 6.23697 20.2083 6.50531 19.5367 6.5088H14.4641C13.7925 6.50531 13.1494 6.23697 12.6745 5.76207C12.1996 5.28717 11.9312 4.64408 11.9277 3.97248V1.43616H22.073Z" stroke={color} stroke-width="2.13" stroke-miterlimit="10"/>
                 </g>
                 <defs>
                 <clipPath id="clip0_21_86">
-                <rect width="34" height="34" fill="white" transform="translate(0 0.379272)"/>
+                <rect width="34" height="34" fill={color} transform="translate(0 0.379272)"/>
                 </clipPath>
                 </defs>
          </svg>

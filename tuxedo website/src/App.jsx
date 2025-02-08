@@ -14,7 +14,7 @@ function App() {
   return (
     <>
     <BrowserRouter basename="/">
-    <Header/>
+  
     <Routes>
     <Route index element={<Home/>}/>
     <Route path='/store' element={<StorePage/>}/>

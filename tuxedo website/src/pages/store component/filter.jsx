@@ -10,9 +10,9 @@ import SizeBox from '../genral/size box'
 import ColorBox from '../genral/color box'
 import CutBox from '../genral/cut box'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
-function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, tieColor}){
+function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, tieColor, filtered ,unchecked}){
    let tuxedoAvailbleSizes=tuxedoSizes
    let tuxedoAvailbleColors=tuxedoColors.name
    let tuxedoAvailbleColorsCode=tuxedoColors.code
@@ -45,25 +45,48 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
         }))
      
     }
-   
-//    let openClose =()=>{
-//     console.log("it worked")
-//     if(isClose){
-//         setHight('fit-content')
-//         setIsClose(false)
-//     }
-//     else{
-//         setHight('0px')
-//         setIsClose(true)
-//     }
-//    }
+    let uncheckedBoxCount=0
+
+    const [checkedBoxes, setCheckedBoxes] = useState({
+        tuxedo: false,
+        loafer: false,
+        tie: false
+    });
+    
+    const handleChange = (boxName) => {
+        setCheckedBoxes((prev) => ({
+            ...prev,
+            [boxName]: !prev[boxName] 
+        }));
+    };
+    useEffect(()=>{
+        Object.keys(checkedBoxes).forEach((key)=>{
+            if(!checkedBoxes[key]){
+                uncheckedBoxCount++
+            }
+        })
+        if(uncheckedBoxCount==3){
+            setCheckedBoxes(prev => 
+                Object.keys(prev).reduce((acc, key) => {
+                    acc[key] = true;  // Set all to true
+                    return acc;
+                }, {})
+            );
+        }
+    },[checkedBoxes])
+    
+
     return(
         <>
             <div className="filter-section">
                 <div className="filter-tuxedo">
                     <div className="filter-title-container">
                         <label htmlFor="tuxedo-filter" ><p className='filter-title'>Tuxedo</p></label>
-                        <input className='filter-check-box'  type="checkbox" id="tuxedo-filter" />
+                        <input className='filter-check-box'  type="checkbox" id="tuxedo-filter" 
+                        onChange={()=>{filtered("tuxedo");
+                        handleChange('tuxedo')}
+                        }/>
+
                     </div>
                     
                     <div className='filter-tuxedo-content' style={{gap:section.tuxedoSize&&section.tuxedoColor?"6px":"0px"}}>
@@ -80,6 +103,7 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
                             <SizeBox size={tuxedoAvailbleSizes[1]}/>
                             <SizeBox size={tuxedoAvailbleSizes[2]}/>
                             <SizeBox size={tuxedoAvailbleSizes[3]}/>
+                            data
                         </div> 
                         
                     </div> <div className='filter-tuxedo-content'>
@@ -103,7 +127,10 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
                 <div className="filter-tuxedo">
                     <div className="filter-title-container">
                         <label htmlFor="tuxedo-filter" ><p className='filter-title'>Loafer</p></label>
-                        <input className='filter-check-box'  type="checkbox" id="tuxedo-filter" />
+                        <input className='filter-check-box'  type="checkbox" id="tuxedo-filter"
+                         onChange={()=>{
+                            filtered("loafer");
+                            handleChange('loafer')}} />
                     </div>
                     
                     <div className='filter-loafer-content' style={{gap:section.loaferSize&&section.loaferColor?"6px":0}}>
@@ -143,7 +170,7 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
                 <div className="filter-tuxedo">
                     <div className="filter-title-container">
                         <label htmlFor="tuxedo-filter" ><p className='filter-title'>Tie</p></label>
-                        <input className='filter-check-box'  type="checkbox" id="tuxedo-filter" />
+                        <input className='filter-check-box'  type="checkbox" id="tuxedo-filter" onChange={()=>{filtered("tie");handleChange('tie')}}/>
                     </div>
                     
                     <div className='filter-tie-content' style={{gap:section.tieColor&&section.tieCut?"6px":0}}>

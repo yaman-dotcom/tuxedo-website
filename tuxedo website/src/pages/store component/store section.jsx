@@ -22,11 +22,18 @@ import { useEffect, useState } from 'react'
 
 import './store styling/store section .css'
 
-function StoreSection(){
+function StoreSection({tuVisibilty, loVisibilty, tiVisibilty}){
+    let categoryVisibilty={
+        tuxedo:tuVisibilty,
+        loafer:loVisibilty,
+        tie:tiVisibilty,
+    }
     let [onSale,setOnSale]=useState(null)
     let toggleSale=(value)=>{
         setOnSale(value)
     }
+    console.log(categoryVisibilty)
+  
     // fetch datat________________{sale, price, colors, name, sizes, image}
     let tuxedo=[
         {
@@ -143,11 +150,13 @@ function StoreSection(){
             sale:false,
         }
     ]
+    
+    
 
     return(
         <>
             <div className="store-section">
-                <div className='store-card-container'>
+                <div className='store-card-container' style={{display:categoryVisibilty.tuxedo?"flex":"none"}}>
                 {tuxedo.map(tuxedo=>(
                     <TuxedoCard  
                     key={tuxedo.id}
@@ -157,7 +166,7 @@ function StoreSection(){
                     />
                 ))}
                 </div>
-                <div className="store-card-container">
+                <div className="store-card-container" style={{display:categoryVisibilty.loafer?"flex":"none"}}>
                     {loafer.map(loafer=>(
                         <LoaferCard
                             key={loafer.id}
@@ -169,7 +178,7 @@ function StoreSection(){
 
                     
                 </div>
-                <div className="store-card-container">
+                <div className="store-card-container" style={{display:categoryVisibilty.tie?"flex":"none"}}>
                     {tie.map(tie=>(
                         <TieCard
                             key={tie.id}
@@ -179,7 +188,7 @@ function StoreSection(){
                         />
                     ))}
                 </div>
-                <div className="store-card-container">
+                <div className="store-card-container" style={{display:categoryVisibilty.loafer?"flex":"none"}}>
                     {loafer.map(loafer=>(
                         <LoaferCard
                             key={loafer.id}
@@ -191,19 +200,10 @@ function StoreSection(){
 
                     
                 </div>
-                <div className="store-card-container">
-                    {loafer.map(loafer=>(
-                        <LoaferCard
-                            key={loafer.id}
-                            loaferName={loafer.name}
-                            loaferPrice={loafer.price}
-                            img={loafer.img}
-                        />
-                    ))}
 
                     
-                </div>
-                <div className='store-card-container'>
+               
+                <div className='store-card-container' style={{display:categoryVisibilty.tuxedo?"flex":"none"}}>
                 {tuxedo.map(tuxedo=>(
                     <TuxedoCard  
                     key={tuxedo.id}
