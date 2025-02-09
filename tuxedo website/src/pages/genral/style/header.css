@@ -9,6 +9,7 @@
     justify-content: space-between;
     align-items: center;
     overflow: visible;
+    backdrop-filter: blur(10px);
 }
 .header-link {
     color: white;

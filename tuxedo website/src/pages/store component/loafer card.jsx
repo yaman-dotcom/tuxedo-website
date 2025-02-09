@@ -1,4 +1,6 @@
 import './store styling/loafer card.css'
+import './store styling/loafer card 1340px.css'
+import './store styling/loafer card 1100px.css'
 
 function LoaferCard ({img,loaferName, loaferPrice}){
 

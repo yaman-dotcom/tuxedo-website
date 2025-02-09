@@ -1,5 +1,5 @@
 .tie-card{
-    width: calc(100% - 18px);
+    width: 100%;
     border: solid;
     border-color: #E5E5E5;
     border-width: 1px;
@@ -10,6 +10,7 @@
     display: flex;
     overflow: hidden;
     align-items: end;
+    box-sizing: border-box;
 }
 .tie-info-container{
     background-color: #3C442B80;
@@ -36,6 +37,7 @@
     color: white;
     text-decoration: underline;
     font-style: italic;
+    font-size: 24px;
     /* padding: 12px 12px ; */
    
 }

@@ -1,0 +1,15 @@
+@media(max-width:1100px){
+    .filter-section{
+        padding: 18px  24px 0 48px;
+        
+    }
+    .filter-title{
+        font-size: 24px;
+    }
+    .filter-sub-title{
+        font-size: 18px;
+    }
+    p{
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,21 @@
+@media(max-width:1340px){
+    .filter-section{
+        z-index: 6;
+        position: fixed;
+        top: 0;
+        width: fit-content;
+        height: 100vh;
+        backdrop-filter: blur(10px);
+        transition: all ease;
+    }
+    .filter-empty-space{
+        z-index:5;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+
+    }
+    /* .filter-title-container{
+        width: 180px;
+    } */
+}

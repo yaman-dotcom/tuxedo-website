@@ -1,0 +1,28 @@
+@media (max-width:1340px){
+    .store-section{
+        padding: 140px 60px 0;
+        
+    }
+    .store-filter-button{
+        position: fixed;
+        all: unset;
+        display: flex;
+        width: fit-content;
+        padding: 6px 12px;
+        gap: 6px;
+        border: solid;
+        border-width: 0 0 0.5px 0;
+        border-color: rgba(0, 0, 0, 0.327);
+    }
+    .filter-button-text{ 
+        font-style: italic;
+        font-weight: 400;
+        font-size: 32px;
+    }
+    .store-filter-button-contaienr{
+        position: absolute;
+        top: 70px;
+        border-radius: 10%;
+        /* backdrop-filter: blur(7px); */
+    }
+}

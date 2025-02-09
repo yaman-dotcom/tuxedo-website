@@ -1,37 +1,34 @@
-// 1.	Use .map() instead of manually rendering each SizeBox & ColorBox.
-// •	This reduces repeated code and makes adding more sizes/colors easier.
-// 2.	Remove unnecessary variables like tuxedoAvailbleSizes and use tuxedoSizes directly.
+
+
+
 // 3.	Create a reusable component for filter sections (FilterCategory).
 // •	This reduces redundant JSX and keeps your code modular.
 // 4.	Fix incorrect HTML attributes (stroke-width → strokeWidth, marginbottom → marginBottom).
 
 import './store styling/store filter.css'
+import './store styling/store filter 1340px.css'
+import './store styling/store filter 1100px.css'
+
 import SizeBox from '../genral/size box'
 import ColorBox from '../genral/color box'
 import CutBox from '../genral/cut box'
 
 import { useEffect, useState } from 'react'
 
-function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, tieColor, filtered ,unchecked}){
+function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, tieColor, filtered ,FilterIsvisible ,filtertoggle}){
    let tuxedoAvailbleSizes=tuxedoSizes
-   let tuxedoAvailbleColors=tuxedoColors.name
-   let tuxedoAvailbleColorsCode=tuxedoColors.code
    let tuxedoAvailble={
     color:tuxedoColors.name,
     code:tuxedoColors.code,
    }
 
    let loaferAvailbleSizes=loaferSizes
-   let loaferAvailbleColors=loaferColors.name
-   let loaferAvailbleColorsCode=loaferColors.code
    let loaferAvailble={
     color:loaferColors.name,
     code:loaferColors.code,
    }
 
    let tieAvailbleCuts=tieCuts
-   let tieAvailbleColors=tieColor.name
-   let tieAvailbleColorsCode=tieColor.code
    let tieAvailble={
     color:tieColor.name,
     code:tieColor.code,
@@ -59,45 +56,24 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
     }
     let uncheckedBoxCount=0
 
-    const [checkedBoxes, setCheckedBoxes] = useState({
-        tuxedo: false,
-        loafer: false,
-        tie: false
-    });
-    
-    const handleChange = (boxName) => {
-        setCheckedBoxes((prev) => ({
-            ...prev,
-            [boxName]: !prev[boxName] 
-        }));
-    };
-    useEffect(()=>{
-        Object.keys(checkedBoxes).forEach((key)=>{
-            if(!checkedBoxes[key]){
-                uncheckedBoxCount++
-            }
-        })
-        if(uncheckedBoxCount==3){
-            setCheckedBoxes(prev => 
-                Object.keys(prev).reduce((acc, key) => {
-                    acc[key] = true;  // Set all to true
-                    return acc;
-                }, {})
-            );
-        }
-    },[checkedBoxes])
+ 
+    console.log(FilterIsvisible)
     
 
     return(
         <>
-            <div className="filter-section">
+            <div className='filter-empty-space' style={{display:FilterIsvisible?'flex':'none'}} onClick={()=>filtertoggle()}>
+
+            </div>
+            <div className="filter-section" style={{left:FilterIsvisible?"0px":"-250px"}}>
+                
                 <div className="filter-tuxedo">
                     <div className="filter-title-container">
                         <label htmlFor="tuxedo-filter" ><p className='filter-title'>Tuxedo</p></label>
                         <input className='filter-check-box'  type="checkbox" id="tuxedo-filter" 
                         onChange={()=>{filtered("tuxedo");
-                        handleChange('tuxedo')}
-                        }/>
+                        }}
+                        />
 
                     </div>
                     
@@ -145,7 +121,7 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
                         <input className='filter-check-box'  type="checkbox" id="tuxedo-filter"
                          onChange={()=>{
                             filtered("loafer");
-                            handleChange('loafer')}} />
+                            }}/>
                     </div>
                     
                     <div className='filter-loafer-content' style={{gap:section.loaferSize&&section.loaferColor?"6px":0}}>
@@ -188,7 +164,7 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
                 <div className="filter-tuxedo">
                     <div className="filter-title-container">
                         <label htmlFor="tuxedo-filter" ><p className='filter-title'>Tie</p></label>
-                        <input className='filter-check-box'  type="checkbox" id="tuxedo-filter" onChange={()=>{filtered("tie");handleChange('tie')}}/>
+                        <input className='filter-check-box'  type="checkbox" id="tuxedo-filter" onChange={()=>{filtered("tie");}}/>
                     </div>
                     
                     <div className='filter-tie-content' style={{gap:section.tieColor&&section.tieCut?"6px":0}}>

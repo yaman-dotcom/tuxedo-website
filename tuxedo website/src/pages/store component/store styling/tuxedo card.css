@@ -1,5 +1,5 @@
 .tuxedo-card{
-    width: calc(100% - 18px);
+    width: 100%;
     border: solid;
     border-color: rgb(0,0,0,0.1);
     border-width: 1px;
@@ -9,6 +9,8 @@
     background-size: cover;
     display: flex;
     align-items: end;
+    margin-bottom: 4px;
+    box-sizing: border-box; 
 }
 .tc-info-container{
     display: flex;
@@ -29,5 +31,5 @@
 .tc-price{
     text-decoration: underline;
     font-style: italic;
-   
+    font-size: 24px;
 }

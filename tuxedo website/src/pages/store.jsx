@@ -91,7 +91,11 @@ function StorePage(){
         //         newVisibilty[selectedItem]=false
         //        }
         //    }
-
+        let [filterIsVisible,setfilterIsVisible]=useState(false)
+        let toggleShowFilter=()=>{
+            setfilterIsVisible((pre)=>!pre)
+            console.log(filterIsVisible)
+        }
 
     return(
         <>
@@ -106,12 +110,14 @@ function StorePage(){
                 tieCuts={["classic", "skinny","wide"]}
                 filtered={filtered}
                 unchecked={unCheckedStatus}
+                FilterIsvisible={filterIsVisible}
+                filtertoggle={toggleShowFilter}
                 />
             <StoreSection 
             tuVisibilty={visibility.tuxedo}
             tiVisibilty={visibility.tie}   
             loVisibilty={visibility.loafer} 
-
+            filterVisibilty={()=>toggleShowFilter()}
             />
         </div>
            <Footer/>

@@ -1,6 +1,8 @@
 import { useState,useEffect } from 'react'
 
 import './store styling/tuxedo card.css'
+import './store styling/tuxedo card 1340px.css'
+import './store styling/tuxedo card 1100px.css'
 function TuxedoCard ({img, tuxedoName, sale, tuxedoColor ,tuxedoPrice}){
    
    

@@ -1,0 +1,7 @@
+@media(max-width:920px){
+    .store-card-container{
+        display: grid !important;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
