@@ -57,7 +57,7 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
     let uncheckedBoxCount=0
 
  
-    // console.log(FilterIsvisible)
+   
     
 
     return(
