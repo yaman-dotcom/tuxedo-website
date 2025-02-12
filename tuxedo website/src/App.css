@@ -31,6 +31,8 @@ p{
   height: fit-content;
   width: fit-content;
   display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   background-color: #303820;
   border-radius: 12px;

@@ -25,7 +25,7 @@ import './store styling/store section 1340px.css'
 import './store styling/store section 1100px .css'
 import './store styling/store section 920px.css'
 
-function StoreSection({tuVisibilty, loVisibilty, tiVisibilty ,filterVisibilty}){
+function StoreSection({tuVisibilty, loVisibilty, tiVisibilty ,filterVisibilty ,tuxedoItem ,loaferItem ,tieItem}){
     let categoryVisibilty={
         tuxedo:tuVisibilty,
         loafer:loVisibilty,
@@ -35,126 +35,13 @@ function StoreSection({tuVisibilty, loVisibilty, tiVisibilty ,filterVisibilty}){
     let toggleSale=(value)=>{
         setOnSale(value)
     }
-    console.log(categoryVisibilty)
+    // console.log(categoryVisibilty)
   
     // fetch datat________________{sale, price, colors, name, sizes, image}
-    let tuxedo=[
-        {
-            id:1,
-            name:"Midnight Badron",
-            colors:["black", "marone", "blue"],
-            slae:false,
-            price:940,
-            size:[31,32,34],
-            image:tuxedo1,
-        },
-        {
-            id:2,
-            name:"sunday Badron",
-            colors:["black", "blue"],
-            slae:true,
-            price:1400,
-            size:[32,34],
-            image:tuxedo2,
-        },
-        {
-            id:3,
-            name:"sunday Badron",
-            colors:["black", "blue"],
-            slae:true,
-            price:1400,
-            size:[32,34],
-            image:tuxedo4,
-        }, 
-        {
-            id:4,
-            name:"sunday Badron",
-            colors:["black", "blue"],
-            slae:true,
-            price:1400,
-            size:[32,34],
-            image:tuxedo3,
-        }
-    ]
-    let loafer=[
-        {
-            id:1,
-            name:"Nocturne Slip",
-            price:160,
-            size:[40,42,43],
-            color:["black","maron"],
-            img:loafer1,
-            sale:true,
-        },
-        {
-            id:2,
-            name:"Nocturne Slip",
-            price:160,
-            size:[40,42,43],
-            color:["black","maron"],
-            img:loafer4,
-            sale:false,
-        },
-        {
-            id:3,
-            name:"Nocturne Slip",
-            price:140,
-            size:[40,42,43],
-            color:["black","maron"],
-            img:loafer2,
-            sale:false,
-        },
-        {
-            id:4,
-            name:"Nocturne Slip",
-            price:90,
-            size:[40,42,43],
-            color:["black","maron"],
-            img:loafer3,
-            sale:false,
-        },
+    let tuxedo=tuxedoItem
+    let loafer=loaferItem
+    let tie=tieItem
 
-    ]
-    let tie=[
-        {
-            id:1,
-            name:'Silk Symphony',
-            price:90,
-            img:tie3,
-            color:['brown'],
-            cut:"classic",
-            sale:false,
-        },
-        {
-            id:2,
-            name:'Silk Symphony',
-            price:90,
-            img:tie1,
-            color:['brown'],
-            cut:"classic",
-            sale:false,
-        },
-        {
-            id:3,
-            name:'Silk Symphony',
-            price:90,
-            img:tie2,
-            color:['brown'],
-            cut:"classic",
-            sale:false,
-        },
-        {
-            id:4,
-            name:'Silk Symphony',
-            price:90,
-            img:tie4,
-            color:['brown'],
-            cut:"classic",
-            sale:false,
-        }
-    ]
-    
-    
 
     return(
         <>

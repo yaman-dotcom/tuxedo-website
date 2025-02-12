@@ -15,7 +15,7 @@ import CutBox from '../genral/cut box'
 
 import { useEffect, useState } from 'react'
 
-function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, tieColor, filtered ,FilterIsvisible ,filtertoggle}){
+function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, tieColor, filtered ,FilterIsvisible ,filtertoggle ,clickingBoxes}){
    let tuxedoAvailbleSizes=tuxedoSizes
    let tuxedoAvailble={
     color:tuxedoColors.name,
@@ -57,7 +57,7 @@ function Filter({tuxedoSizes, tuxedoColors, loaferSizes, loaferColors, tieCuts, 
     let uncheckedBoxCount=0
 
  
-    console.log(FilterIsvisible)
+    // console.log(FilterIsvisible)
     
 
     return(

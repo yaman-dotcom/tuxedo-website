@@ -6,7 +6,10 @@ import './App 920px.css'
 
 import Home from './pages/home'
 import StorePage from './pages/store'
+import ContactUsPage from "./pages/contact us";
 import Header from './pages/genral/header'
+import LogInPage from "./pages/log in page ";
+import BagPage from "./pages/genral/bag page";
 
 function App() {
 
@@ -18,7 +21,9 @@ function App() {
     <Routes>
     <Route index element={<Home/>}/>
     <Route path='/store' element={<StorePage/>}/>
-    {/* <Route path="/store" element={<h1>Store Page is working!</h1>} /> */}
+    <Route path="/contact-us" element={<ContactUsPage/>}/>
+    <Route path="/log-in" element={<LogInPage/>}/>
+    <Route path="/bag" element={<BagPage/>}/>
     </Routes>
     </BrowserRouter>
     </>
