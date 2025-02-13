@@ -9,7 +9,7 @@ import StorePage from './pages/store'
 import ContactUsPage from "./pages/contact us";
 import Header from './pages/genral/header'
 import LogInPage from "./pages/log in page ";
-import BagPage from "./pages/genral/bag page";
+import BagPage from "./pages/bag page";
 
 function App() {
 

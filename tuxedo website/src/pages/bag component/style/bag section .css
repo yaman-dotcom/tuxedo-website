@@ -1,0 +1,32 @@
+.bag-section{
+    display: flex;
+    flex-direction: row;
+    /* width: 100vw; */
+    height: 80vh;
+    padding: 90px 60px;
+    gap: 60px;
+    overflow: hidden;
+    position: relative;
+}
+.bag-goods-contaienr{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.bag-right-container{
+    width: 100%;
+    position: relative;
+}
+.bag-total-contaienr{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+    background-color: #DEDFDB;
+    padding: 5px 0;
+    z-index:10 ;
+}
+.bag-total-contaienr-text{
+    padding: 0 26px;
+}
