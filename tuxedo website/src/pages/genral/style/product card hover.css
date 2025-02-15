@@ -1,0 +1,28 @@
+.product-card-hover-contaienr{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    gap: 24px;
+    border: solid;
+    /* border-bottom: 1px; */
+    border-left: 0;
+    border-right: 0;
+    border-top:0 ;
+    padding: 6px 0px 18px;
+} 
+.pch-image{
+    width: 51px;
+    height: 146px;
+    object-fit: cover;
+    margin-left:18px ;
+}
+.pch-name{
+    font-size: 40px;
+    font-weight: 350;
+    color: #3C442B;
+    font-style: italic;
+    margin-bottom: 12px;
+}
+.pch-color, .pch-price{
+    font-style: italic;
+}

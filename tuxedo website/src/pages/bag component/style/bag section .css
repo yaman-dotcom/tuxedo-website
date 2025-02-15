@@ -10,8 +10,9 @@
 }
 .bag-goods-contaienr{
     width: 100%;
-    height: 100%;
-    overflow: hidden;
+    height: 700px;
+    
+    /* overflow: hidden; */
 }
 .bag-right-container{
     width: 100%;
@@ -30,3 +31,19 @@
 .bag-total-contaienr-text{
     padding: 0 26px;
 }
+.sidbar-swiper{
+    height: 500px;
+}
+/* Swiper scrollbar track */
+.swiper-scrollbar {
+    background: #5c5c5c16 !important; /* Track color */
+    right: 0px !important; /* Adjust placement inside the container */
+    width: 9px !important; /* Adjust scrollbar thickness */
+
+  }
+  
+  /* Swiper scrollbar thumb (draggable part) */
+  .swiper-scrollbar-drag {
+    background: #5e5e5e !important; /* Customize thumb color */
+    border-radius: 10px;
+  }

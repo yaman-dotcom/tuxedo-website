@@ -4,7 +4,7 @@ import noSale from '../../assets/bag /no sale.png'
 import './style/bag selected product .css'
 
 function BagSelectedProduct ({poductImage, productName ,productColor, productSize ,productPrice ,Sale}){
-
+    console.log(Sale)
     return(
         <>
             <div className="bag-selected-product-container">

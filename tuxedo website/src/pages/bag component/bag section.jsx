@@ -2,10 +2,16 @@ import './style/bag section .css'
 
 import tie from '../../assets/store page sources/Frame 50.png'
 
-import Swiper from 'swiper'
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Keyboard, Mousewheel ,Scrollbar} from "swiper/modules";
+import "swiper/css";
+import "swiper/css/free-mode";
 
 import BagSelectedProduct from './bag selected product'
-import { useEffect, useState } from 'react'
+
+import { useState,useEffect } from 'react';
+import SlideShowSection from '../home component/slide show';
+
 function BagSection(){
     let choosedProduct=[
         {
@@ -14,7 +20,7 @@ function BagSection(){
             name:"The Sovereign Edge",
             price:1900,
             img:tie,
-            sale:true,
+            sale:false,
             color:"black",
             size:41,
 
@@ -25,7 +31,7 @@ function BagSection(){
             name:"The Sovereign Edge",
             price:1900,
             img:tie,
-            sale:true,
+            sale:false,
             color:"black",
             size:41,
 
@@ -68,9 +74,10 @@ function BagSection(){
     let [total,setTotal]=useState(0)
 
     
-    // choosedProduct.forEach((product)=>setTotal(pre=>pre+=product.price))
-    // useEffect(()=>{
-    // },choosedProduct)
+    useEffect(() => {
+        const newTotal = choosedProduct.reduce((acc, product) => acc + product.price, 0);
+        setTotal(newTotal);
+    }, [choosedProduct]);
 
     return(
         <>
@@ -85,19 +92,52 @@ function BagSection(){
                 </div>
                 <div className='bag-right-container'>
                     <div className="bag-goods-contaienr">
+                    <Swiper style={{ height: "105%",position:"relative" }}
+                    modules={[FreeMode,Mousewheel,Keyboard,Scrollbar]}
+                    direction='vertical'
+                    slidesPerView={'auto'}
+                    grabCursor={true}
+                    // slidesPerGroup={1}
+                    spaceBetween={30}
+                    // slideToClickedSlide={true}
+                    // scrollbar={true}
+                    autoHeight={true}
+                    effect='slide'
+                    freeMode={{
+                        enabled:true,
+                        momentumRatio:1
+                    }}
+                    keyboard={{
+                        enabled:true,
+                        onlyInViewport:true,
+                        pageUpDown:true
+                    }}
+                    mousewheel={{
+                        sensitivity:1.3,
+                        forceToAxis:true
+                    }}
+                    scrollbar={{
+                        hide:false,
+                        draggable:true,
+                       
+                    }}
+                    speed={1000}
+                    >
                         {
                             choosedProduct.map((pro)=>(
+                                <SwiperSlide key={pro.id}>
                                 <BagSelectedProduct
-                                    key={pro.id}
                                     productSize={pro.size}
                                     productColor={pro.color}
                                     productPrice={pro.price}
-                                    productName={pro.name}
-                                    sale={pro.sale}
+                                    productName={pro.name}  
                                     poductImage={pro.img}
+                                    Sale={pro.sale}
                                 />
+                                </SwiperSlide>
                             ))
                         }
+                        </Swiper>
                     </div>
                     <div className='bag-total-contaienr'>
                         <p className='bag-total-contaienr-text'>total</p>

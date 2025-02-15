@@ -7,7 +7,69 @@ import React from 'react'
 import { useState ,useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
+import tie from '../../assets/store page sources/fit.png'
+
+import ProductCardHover from './products card (hover)'
+
 function Header({textColor}){
+    let choosedProduct=[
+        {
+            id:1,
+            kind:"tie",
+            name:"The Sovereign Edge",
+            price:1900,
+            img:tie,
+            sale:true,
+            color:"black",
+            size:41,
+
+        },
+        {
+            id:2,
+            kind:"tie",
+            name:"The Sovereign Edge",
+            price:1900,
+            img:tie,
+            sale:true,
+            color:"black",
+            size:41,
+
+        },
+        {
+            id:3,
+            kind:"tie",
+            name:"The Sovereign Edge",
+            price:1900,
+            img:tie,
+            sale:true,
+            color:"black",
+            size:41,
+
+        },
+        {
+            id:4,
+            kind:"tie",
+            name:"The Sovereign Edge",
+            price:1900,
+            img:tie,
+            sale:true,
+            color:"black",
+            size:41,
+
+        },
+        {
+            id:5,
+            kind:"tie",
+            name:"The Sovereign Edge",
+            price:1900,
+            img:tie,
+            sale:true,
+            color:"black",
+            size:41,
+
+        },
+        
+    ]
   let [width,setWidth]=useState(window.outerWidth)
   let color
   textColor==undefined?color="white":color=textColor;
@@ -36,7 +98,12 @@ const changeTheOpened = () => {
         return newState;
     });
 };
+let [total,setTotal]=useState(0)
 
+useEffect(()=>{
+    const newTotal=choosedProduct.reduce((sum,item)=>sum +item.price,0)
+    setTotal(newTotal)
+},[choosedProduct])
     return(
         <>
         <div className='header-container' style={{backdropFilter:!opened?"blur(7px)":"none"}}> 
@@ -87,15 +154,38 @@ const changeTheOpened = () => {
          }}
          onClick={()=>changeTheOpened()}
          >
-         <svg 
-         
-         style={{
-            visibility:opened?'hidden':'visible',
-            position:'absolute'
-         }}
-         width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.5 0.75H29M29 11.25H1.5M1.5 22.25H29" stroke={color} stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
+         <div className='bag-icon-container'>
+         <div className="header-bag-hover-container">
+            
+            {choosedProduct.map((pro)=>(
+                    <ProductCardHover
+                    key={pro.id}
+                    productName={pro.name}
+                    producColor={pro.color}
+                    producImage={pro.img}
+                    productPrice={pro.price}
+                    />
+                ))
+            }
+            <div className="header-bag-hover-container-total-contaienr">
+                <p className="header-bag-hover-total">
+                        Total:
+                </p>
+                <p className="header-bag-hover-total">
+                    {total}$
+                </p>
+            </div>
+         </div>
+            <svg 
+            
+            style={{
+                visibility:opened?'hidden':'visible',
+                position:'absolute'
+            }}
+            width="30" height="23" viewBox="0 0 30 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 0.75H29M29 11.25H1.5M1.5 22.25H29" stroke={color} stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+         </div>
         <svg
         
         style={{
@@ -131,7 +221,7 @@ const changeTheOpened = () => {
                 </div>
             </ul>
          </div>
-
+         
 
         </div>
         </>

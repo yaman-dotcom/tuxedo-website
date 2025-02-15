@@ -76,4 +76,38 @@
     color: #212517;
     font-weight: 300;
 }
+.header-bag-hover-container{
+    position: fixed;
+    width: 475px;
+    height: 641px;
+    background-color: #ffffffb9;
+    border-radius: 5%;
+    right: 60px;
+    top: 90px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: 18px;
+    padding-top: 18px;
+    opacity: 0;
+    visibility: hidden;
+}
+.header-bag-hover-container-total-contaienr{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #DEDFDB;
+    position: absolute;
+    bottom: 0;
+    
+    /* padding: 18px 26px; */
+}
+.header-bag-hover-total{
+    margin: 18px 26px;
+}
+.bag-icon-container:hover .header-bag-hover-container {
+    opacity: 1;
+    visibility: visible;
+}
 
